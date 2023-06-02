@@ -1,0 +1,267 @@
+/* Importando a fonte do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+/* Configurações iniciais para todos os elementos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing:border-box;/*utilizada para alterar a propriedade padrão da box model, usada para calcular larguras  e alturas  dos elementos*/
+  font-family: 'Poppins',sans-serif,'Raleway';
+}
+
+/* Configurações para o corpo do documento */
+/* Vw medida usada para altura e largura serem igual */
+body {
+     background:linear-gradient(#120228 0%,#461759 40%);
+     min-height: 100vh; /*usado para definir a altura mínima de um determinado elemento.*/
+     overflow-x: hidden; /*tratar conteúdos que ultrapassam os limites de um elemento na horizontal*/
+}
+
+/* Configurações para o cabeçalho */
+header {
+ position: absolute;
+ top: 0;/*recurso usado para ordenar os elementos HTML de uma página web, como sites, redes sociais e blogs*/
+ left: 0;
+ width: 100%;
+ padding: 30px 100px;/*é responsável por definir uma distância interna entre um elemento e sua borda.*/
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ z-index: 100;
+
+}
+
+.slider{
+    margin: 0 auto;
+    margin-top: 10%;
+		width: 800px;
+		height: 400px;
+		overflow: hidden;
+}
+.slides{
+	width: 400%;
+	height: 400px;
+	display: flex;
+}
+
+.slides input {
+	display: none;
+}
+.slide{
+	width: 25%;
+	position: relative;
+	transition: 2s;
+}
+.slide img{
+	width: 800px;
+}
+
+.manual-navigation{
+	position: absolute;
+	width: 100%;
+    padding-right: 550px;
+	margin-top: -90px;
+	display: flex;
+	justify-content: center;
+}
+.manual-btn{
+	border: 2px solid #fff;
+	padding: 5px;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: 1s;
+}
+.manual-btn:not(:last-child){
+	margin-right: 40px;
+}
+
+.manual-btn:hover{
+	background-color: #fff;
+    
+}
+
+#radio1:checked ~ .first{
+	margin-left: 0%;
+
+}
+#radio2:checked ~ .first{
+	margin-left: -25%;
+}
+#radio3:checked ~ .first{
+	margin-left: -50%;
+}
+#radio4:checked ~ .first{
+	margin-left: -75%;
+}
+
+.navigation-auto div{
+	border: 2px solid #eaf6ff;
+	padding: 5px;
+	border-radius:10px;
+	cursor: pointer;
+	transition: 1s;
+}
+
+.navigation-auto{
+	position: absolute;
+	width: 100%;
+	margin-top: 310px;
+	display: flex;
+	justify-content: center;
+    padding-right: 550px;
+}
+
+.navigation-auto div:not(:last-child){
+	margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1{
+	background-color: #fff;
+}
+#radio2:checked ~ .navigation-auto .auto-btn2{
+	background-color: #fff;
+}
+#radio3:checked ~ .navigation-auto .auto-btn3{
+	background-color: #fff;
+}
+#radio4:checked ~ .navigation-auto .auto-btn4{
+	background-color: #fff;
+}
+
+/* Configurações para o logotipo */
+.logo {
+ color: #ffffff;
+ font-size: 2em;
+ cursor: default;
+}
+
+/* Configurações para os links da navegação */
+.navbar a{
+    color: #ffffff;
+    text-decoration: none;
+    margin: left 20px;
+    font-weight: 600;
+    padding: 6px 15px;
+    border-radius: 20px;
+
+}
+
+/* Configurações para os links da navegação quando o mouse estiver sobre eles */
+.navbar a:hover,
+.navbar a:active{
+    background: #5b1d74;
+}
+
+/* Configurações para o efeito de parallax */
+.parallax{
+
+    position:relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.parallax img{
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    pointer-events:none;
+
+}
+
+/* Configurações para a seção */
+.sec{
+    position: relative;
+    padding: 100px;
+    background: #ffffff;
+    padding-top: 8%;
+
+}
+
+/* Configurações para o título da seção */
+.sec h2{
+    font-size: 3em;
+    color: #331141;
+    margin-bottom: 10px;
+
+}
+
+/* Configurações para o subtítulo da seção */
+.sec h3{
+    font-size: 2em;
+    color: #331141;
+    margin-bottom: 10px;
+    
+}
+
+/* Configurações para o texto da seção */
+.sec p{
+    font-size: 1.5em;
+    color: #331141;
+    font-weight: 200;
+    font-family: 'Raleway';
+    text-align: justify;
+    
+}
+.sec2{
+    /*position: relative;*/
+    padding: 100px;
+    background: #331141;
+
+}
+
+.contato {
+    position: relative;
+    padding: 100px;
+    background: #331141;
+    padding-top: 10%;
+}
+
+.contato h2{
+    font-size: 3em;
+    color: #ffffff;
+    margin-bottom: 10px;
+
+}
+
+.contato h3{
+    font-size: 2em;
+    color: #ffffff;
+    margin-bottom: 10px;
+    
+}
+
+.contato p{
+    font-size: 1.5em;
+    color: #331141;
+    font-weight: 200;
+    font-family: 'Raleway';
+    text-align: justify;
+    
+}
+.footer {
+    display: flex;
+    justify-content: space-around;
+    background-color: #f2f2f2;
+    padding: 20px;
+    color:#331141;
+}
+
+.footer-item {
+    text-align: center;
+}
+
+.footer-item h3 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.footer-item p {
+    font-size: 20px;
+    margin: 0;
+}
+
